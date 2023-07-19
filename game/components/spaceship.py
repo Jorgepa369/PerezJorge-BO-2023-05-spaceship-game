@@ -23,7 +23,7 @@ class Spaceship(Sprite):
             self.rect.x += 10
             if self.rect.left > SCREEN_WIDTH:
                 self.rect.right = 0
-        elif user_input[pygame.K_UP] and self.rect.top > 250:
+        elif user_input[pygame.K_UP] and self.rect.top > 0:
             self.rect.y -= 10
         elif user_input[pygame.K_DOWN] and self.rect.bottom < SCREEN_HEIGHT:
             self.rect.y += 10

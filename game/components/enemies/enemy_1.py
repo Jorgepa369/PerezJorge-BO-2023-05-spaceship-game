@@ -4,7 +4,7 @@ from pygame.sprite import Sprite
 
 from game.utils.constants import ENEMY_1, SCREEN_HEIGHT, SCREEN_WIDTH
 
-class Enemy(Sprite):
+class Enemy1(Sprite):
     ENEMY_WIDTH = 40
     ENEMY_HEIGHT = 60
     Y_POS = 0

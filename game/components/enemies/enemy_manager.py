@@ -1,5 +1,6 @@
 import pygame
-from game.components.enemies.enemy import Enemy
+from game.components.enemies.enemy_1 import Enemy1
+from game.components.enemies.enemy_2 import Enemy2
 
 class EnemyManager:
     def __init__(self):
@@ -17,5 +18,9 @@ class EnemyManager:
 
     def add_enemy(self):
         if len(self.enemies) < 1:
-            enemy = Enemy()
-            self.enemies.append(enemy)
+            enemy1 = Enemy1()
+            self.enemies.append(enemy1)
+            enemy2 = Enemy2()
+            self.enemies.append(enemy2)
+            
+    
