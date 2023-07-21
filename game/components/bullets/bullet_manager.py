@@ -33,3 +33,7 @@ class BulletManager:
             self.enemy_bullets.append(bullet)
         elif bullet.owner == 'player' and len(self.player_bullets) < 3 :
             self.player_bullets.append(bullet)
+            
+    def reset(self):
+        self.player_bullets = []
+        self.enemy_bullets = []

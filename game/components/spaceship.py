@@ -17,6 +17,9 @@ class Spaceship(Sprite):
         self.type = 'player'
 
     def update(self, user_input, game):
+        if user_input[pygame.K_SPACE]:
+            self.shoot(game)
+        
         if user_input[pygame.K_LEFT]:
             self.rect.x -= 12
             if self.rect.right < 0:
@@ -30,8 +33,7 @@ class Spaceship(Sprite):
         elif user_input[pygame.K_DOWN] and self.rect.bottom < SCREEN_HEIGHT:
             self.rect.y += 12
         
-        if user_input[pygame.K_SPACE]:
-            self.shoot(game)
+
             
     
     def draw(self, screen):
