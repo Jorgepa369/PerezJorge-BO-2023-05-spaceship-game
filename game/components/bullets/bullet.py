@@ -17,10 +17,10 @@ class Bullet(Sprite):
     def update(self, bullets):
         if self.owner == 'player':
             self.rect.y -= self.SPEED
-        else: 
+        else:
             self.rect.y += self.SPEED
 
-        if self.rect.y < 0 or self.rect.y > SCREEN_HEIGHT:
+        if self.rect.top < 0 or self.rect.centery > SCREEN_HEIGHT:
             bullets.remove(self)
 
     def draw(self, screen):

@@ -23,9 +23,11 @@ class Enemy(Sprite):
         self.moves_before_change = random.randint(20, 50)
         self.speed_on_x = speed_on_x
         self.speed_on_y = speed_on_y
+        self.index = 0
         self.type = 'enemy'
         current_time = pygame.time.get_ticks()
         self.shooting_time = random.randint(current_time + self.INITIAL_SHOOTING_TIME, current_time + self.INITIAL_SHOOTING_TIME)
+        self.shoot_num = 0 
 
     def update(self, enemies, game):
         self.rect.y += self.speed_on_y
@@ -61,4 +63,5 @@ class Enemy(Sprite):
         if self.shooting_time <= current_time:
             bullet = Bullet(self)
             bullet_manager.add_bullet(bullet)
+            self.shoot_num += 1
             self.shooting_time += random.randint(self.INITIAL_SHOOTING_TIME, self.FINAL_SHOOTING_TIME)
